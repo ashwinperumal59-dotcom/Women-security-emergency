@@ -1,0 +1,19 @@
+
+## Publish to GitHub
+
+1. Create a new empty repository on GitHub named `suraksha-alert`.
+2. Save the four files in one folder.
+3. Open a terminal inside that folder.
+4. Run the commands shown in `README.md`.
+5. Replace `YOUR_USERNAME` with your GitHub username.
+
+This is intentionally a frontend demo: it does not send real alerts or file official complaints. For India, real emergency integrations should use verified official services such as ERSS-112, which supports channels including voice calls, SMS, SOS, and web requests.[1][2]
+## Publish to GitHub
+
+1. Create a new empty repository on GitHub named `suraksha-alert`.
+2. Save the four files in one folder.
+3. Open a terminal inside that folder.
+4. Run the commands shown in `README.md`.
+5. Replace `YOUR_USERNAME` with your GitHub username.
+
+This is intentionally a frontend demo: it does not send real alerts or file official complaints. For India, real emergency integrations should use verified official services such as ERSS-112, which supports channels including voice calls, SMS, SOS, and web requests.[1][2]
