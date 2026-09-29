@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Suraksha Alert women safety demo platform" />
+  <title>Suraksha Alert</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Women’s Safety Platform</p>
+      <h1>Suraksha Alert</h1>
+    </div>
+    <span class="demo-badge">DEMO MODE</span>
+  </header>
+
+  <main class="container">
+    <section class="notice">
+      <strong>Important:</strong>
+      This prototype does not contact real police, emergency services, or family members.
+      Connect verified services before production use.
+    </section>
+
+    <section class="hero card">
+      <div>
+        <p class="eyebrow">Emergency assistance</p>
+        <h2>Get help quickly when you need it.</h2>
+        <p>
+          Use the SOS button, voice alert, or complaint form. Configure official
+          integrations only after security and legal review.
+        </p>
+      </div>
+
+      <div class="sos-area">
+        <button id="sosButton" class="sos-button" aria-describedby="sosHelp">
+          Hold for SOS
+        </button>
+        <p id="sosHelp">Press and hold for 3 seconds to start a demo alert.</p>
+        <p id="alertStatus" class="status" role="status">No active alert</p>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Voice SOS</h2>
+        <p>
+          Set a phrase and use your microphone to trigger a demo alert.
+          Voice detection remains on this page only.
+        </p>
+
+        <label for="voicePhrase">Emergency phrase</label>
+        <input id="voicePhrase" value="suraksha alert" maxlength="60" />
+
+        <div class="button-row">
+          <button id="startVoice" class="primary">Start listening</button>
+          <button id="stopVoice" class="secondary">Stop</button>
+        </div>
+
+        <p id="voiceStatus" class="status" role="status">Voice mode is off</p>
+      </article>
+
+      <article class="card">
+        <h2>Location</h2>
+        <p>Location is requested only when you activate a demo alert.</p>
+        <button id="locationButton" class="secondary">Get current location</button>
+        <p id="locationStatus" class="status" role="status">Location not shared</p>
+      </article>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Emergency contacts</h2>
+        <form id="contactForm">
+          <label for="contactName">Contact name</label>
+          <input id="contactName" required maxlength="80" />
+
+          <label for="contactPhone">Mobile number</label>
+          <input id="contactPhone" type="tel" required maxlength="20" />
+
+          <button class="primary" type="submit">Add contact</button>
+        </form>
+        <ul id="contactList" class="contact-list"></ul>
+      </article>
+
+      <article class="card">
+        <h2>Aadhaar-linked mobile verification</h2>
+        <p>
+          This is a placeholder only. Do not collect Aadhaar numbers or OTPs in
+          this frontend demo.
+        </p>
+        <button id="verificationButton" class="secondary">
+          Start verification demo
+        </button>
+        <p id="verificationStatus" class="status" role="status">
+          Not verified
+        </p>
+      </article>
+    </section>
+
+    <section class="card">
+      <h2>File a safety complaint</h2>
+
+      <form id="complaintForm">
+        <div class="form-grid">
+          <div>
+            <label for="complaintType">Incident type</label>
+            <select id="complaintType" required>
+              <option value="">Select type</option>
+              <option>Harassment</option>
+              <option>Stalking</option>
+              <option>Domestic violence</option>
+              <option>Assault</option>
+              <option>Threat</option>
+              <option>Cybercrime</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="incidentDate">Incident date</label>
+            <input id="incidentDate" type="date" required />
+          </div>
+        </div>
+
+        <label for="incidentLocation">Incident location</label>
+        <input id="incidentLocation" required maxlength="150" />
+
+        <label for="complaintDescription">Description</label>
+        <textarea
+          id="complaintDescription"
+          rows="5"
+          required
+          maxlength="3000"
+          placeholder="Describe what happened."
+        ></textarea>
+
+        <label for="evidence">Evidence file, optional</label>
+        <input
+          id="evidence"
+          type="file"
+          accept="image/*,video/*,audio/*,.pdf,.doc,.docx"
+        />
+
+        <label class="checkbox">
+          <input id="complaintConsent" type="checkbox" required />
+          I consent to storing this demo complaint locally.
+        </label>
+
+        <button class="primary" type="submit">Submit demo complaint</button>
+      </form>
+
+      <p id="complaintStatus" class="status" role="status"></p>
+    </section>
+
+    <section class="card">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Local demo records</p>
+          <h2>Complaint history</h2>
+        </div>
+        <button id="clearData" class="danger-outline">Clear local data</button>
+      </div>
+
+      <div id="complaintList" class="complaint-list">
+        <p>No complaints submitted.</p>
+      </div>
+    </section>
+
+    <section class="card safety-card">
+      <h2>Safety resources</h2>
+      <ul>
+        <li>Call official emergency services during immediate danger.</li>
+        <li>Move to a public or trusted location if possible.</li>
+        <li>Preserve relevant evidence safely.</li>
+        <li>Do not share complaint details publicly.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Suraksha Alert prototype · Not for production emergency use</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
