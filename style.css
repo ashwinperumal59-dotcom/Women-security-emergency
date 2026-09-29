@@ -1,0 +1,58 @@
+/* =========================
+   Suraksha Alert Color Theme
+========================= */
+
+:root {
+  --primary: #2563eb;
+  --secondary: #7c3aed;
+  --pink: #db2777;
+  --orange: #f97316;
+  --yellow: #facc15;
+  --green: #10b981;
+  --red: #dc2626;
+  --dark-blue: #172554;
+  --text: #172033;
+  --muted: #64748b;
+  --white: #ffffff;
+  --light: #f8fafc;
+  --border: #e2e8f0;
+  --shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+}
+
+/* Reset */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top left, #fce7f3, transparent 30%),
+    radial-gradient(circle at top right, #dbeafe, transparent 30%),
+    linear-gradient(135deg, #fff7ed, #f8fafc, #eef2ff);
+}
+
+/* Header */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 6%;
+  color: white;
+  background: linear-gradient(
+    110deg,
+    #172554,
+    #4c1d95,
+    #9d174d
+  );
